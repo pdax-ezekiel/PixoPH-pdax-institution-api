@@ -1,0 +1,12 @@
+﻿TC,Description (1),environment,username,password,side,quote_currency,base_currency,quantity,currency,status_code,expected_error
+1,Successful Request : Status Code Check 200,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,USDC,PHP,500,PHP,200,no error
+2,Response Param Check : currency = PHP,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,USDC,PHP,500,PHP,200,no error
+3,Response Param Check : currency  != PHP,Stage,ezekiel.isidro+4@pdax.ph,Password123!,sell,USDC,PHP,12,USDC,200,no error
+4,Balance Checking : Buy: Currency= PHP : Buy,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,USDC,PHP,1000,PHP,200,no error
+5,Balance Checking : Sell: Currency= PHP : Sell,Stage,ezekiel.isidro+4@pdax.ph,Password123!,sell,USDC,PHP,1000,PHP,200,no error
+6,Balance Checking : Buy: Currency= USDC : Buy,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,USDC,PHP,1000,USDC,200,no error
+7,Balance Checking : Sell: Currency= USDC : Sell,Stage,ezekiel.isidro+4@pdax.ph,Password123!,sell,USDC,PHP,1000,USDC,200,no error
+8,Balance Checking : Buy: Currency= BTC : Buy,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,BTC,PHP,0.183,BTC,200,no error
+9,Balance Checking : Sell: Currency= BTC : Sell,Stage,ezekiel.isidro+4@pdax.ph,Password123!,sell,BTC,PHP,1.01,BTC,200,no error
+10,Balance Checking : Buy: Currency= ETH : Buy,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,ETH,PHP,0.183,ETH,200,no error
+11,Balance Checking : Sell: Currency=ETH : Sell,Stage,ezekiel.isidro+4@pdax.ph,Password123!,sell,ETH,PHP,1.01,ETH,200,no error

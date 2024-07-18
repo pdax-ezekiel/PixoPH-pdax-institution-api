@@ -1,0 +1,15 @@
+﻿TC,Description (1),environment,username,password,amount,currency,address,tag,beneficiary_first_name,beneficiary_last_name,beneficiary_exchange,send_to_self,beneficiary_wallet,status_code,expected_error
+1,Successful Request : Status Code Check 200,Dev,ezekiel.isidro+4@pdax.ph,Password123!,20,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,,,,200,no error
+2,Required Param : Missing  Amount,Dev,ezekiel.isidro+4@pdax.ph,Password123!,,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,,,,400,amount is required and greater than zero.
+3,Required Param : Missing  Currency,Dev,ezekiel.isidro+4@pdax.ph,Password123!,20,,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,,,,400,currency is required.
+4,Required Param : Missing  Address,Dev,ezekiel.isidro+4@pdax.ph,Password123!,20,USDC,,,,,,,,400,address is required.
+5,Required Param : Amount > 50K PHP : Missing Beneficiary First Name,Dev,ezekiel.isidro+4@pdax.ph,Password123!,1000,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,Isidro,2New_vasp_xyz_SlimShadyVASP,FALSE,FALSE,400,beneficiary_first_name and beneficiary_last_name are required
+6,Required Param : Amount > 50K PHP : Missing Beneficiary Last Name,Dev,ezekiel.isidro+4@pdax.ph,Password123!,1000,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,Ezekiel,,2New_vasp_xyz_SlimShadyVASP,FALSE,FALSE,400,beneficiary_first_name and beneficiary_last_name are required
+7,Required Param : Amount > 50K PHP : Missing Beneficiary Exchange,Dev,ezekiel.isidro+4@pdax.ph,Password123!,1000,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,Ezekiel,Isidro,,FALSE,FALSE,400,beneficiary_exchange is required
+8,Required Param : Amount > 50K PHP : Missing Beneficiary  Name : send_to_self is true,Dev,ezekiel.isidro+4@pdax.ph,Password123!,1000,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,2New_vasp_xyz_SlimShadyVASP,TRUE,FALSE,400,beneficiary_first_name and beneficiary_last_name are required
+9,Required Param : Amount > 50K PHP : Missing Beneficiary  Name and beneficiary_exchange  : send_to_self is true and beneficiary_wallet set to true,Dev,ezekiel.isidro+4@pdax.ph,Password123!,1000,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,,TRUE,TRUE,400,beneficiary_first_name and beneficiary_last_name are required
+10,Response Parameter Check,Dev,ezekiel.isidro+4@pdax.ph,Password123!,20,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,,,,200,no error
+11,Verify Debiting : USDC-ERC20,Dev,ezekiel.isidro+4@pdax.ph,Password123!,20,USDC,0x97DCB30E1c1e2EeD95D708858280D38D12b3dFc5,,,,,,,200,no error
+12,Verify Debiting : BTC,Dev,ezekiel.isidro+4@pdax.ph,Password123!,0.2,BTC,tb1qg0p20vjzygwn3em4mxet4gpg0v4ap2qfqnpty4,,,,,,,200,no error
+13,Verify Debiting : USDCXLM,Dev,ezekiel.isidro+4@pdax.ph,Password123!,20,USDCXLM,GDGEUXHKJVHKHJOB4OQDY46ZX2FOIP4RSVUSEDAH4R7BLLFVRBZQXUEI,3800437943,,,,,,200,no error
+14,Verify Debiting : ETH,Dev,ezekiel.isidro+4@pdax.ph,Password123!,0.01,ETH,0x5bdb1ae4D1916B2af9F34a0D59d6432D4E7E2053,,,,,,,200,no error

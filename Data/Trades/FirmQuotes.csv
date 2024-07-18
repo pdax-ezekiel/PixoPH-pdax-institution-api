@@ -1,0 +1,4 @@
+﻿TC,Description (1),environment,username,password,side,quote_currency,base_currency,quantity,status_code,currency,expected_error
+1,Successful Request : Status Code Check 200,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,USDC,PHP,5000,200,PHP,no error
+2,Response Param Check : Buy,Stage,ezekiel.isidro+4@pdax.ph,Password123!,buy,USDC,PHP,5000,200,PHP,no error
+3,Response Param Check : Sell,Stage,ezekiel.isidro+4@pdax.ph,Password123!,sell,USDC,PHP,5000,200,USDC,no error
